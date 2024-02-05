@@ -16,58 +16,64 @@
             {
                 id: 1,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "Sveltekit + Mapbox Component Library",
+                context: "The project that compelled me to learn Svelte",
+                url: "bit.ly/mapcourt",
             },
             {
                 id: 2,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "Flashback: The New York Times History Game",
+                context: "The game I research for that turned me into a history buff",
+                url: "#",
             },
             {
                 id: 3,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "Women's World Cup: How Teams Can Advance",
+                context: "The interactive guide that turned me into a soccer fan",
+                url: "#",
             },
             {
                 id: 4,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "Did somebody say darts?",
+                context: "Extremely precise graphics I made for a story about extreme precision",
+                url: "#",
             },
             {
                 id: 5,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "Major Metros With the Most Migration During the Pandemic",
+                url: "#",
             },
             {
                 id: 6,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "College Educated Workers are Most Exposed to A.I.",
+                context: "My first New York Times front-page story",
+                url: "#",
             },
             {
                 id: 7,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "Where is Miami-Dade County Hottest?",
+                context: "I won a scholarship for this map.",
+                url: "#",
             },
             {
                 id: 8,
                 imageId: rabbit,
-                title: "Project 1",
-                context: "Description of Project 1",
-                URL: "#",
+                title: "Tutorial: Styling a geoTIFF for a web map",
+                context: "When the tutorial doesn't exist, you figure it out, then write it yourself",
+                url: "#",
+            },
+            {
+                id: 9,
+                imageId: rabbit,
+                title: "American Views of China",
+                context: "Made in Adobe Illustrator",
+                url: "#",
             },
             // Add more portfolio items as needed
         ];
@@ -105,6 +111,7 @@
             <section id="about" class="center-content">
                 <div class="left-align-about left-align">
                     <h2 class="center-header">About me</h2>
+                    <p>My full name is Courtney Cox, but Court will do just fine.</p>
                     <h3>My degrees</h3>
                     <p>
                         I have a bachelor's degree in Creative Writing and a
@@ -112,8 +119,7 @@
                     </p>
                     <p>
                         <em
-                            >Shoutout to my fellow cartographer-poets. Email me
-                            if you exist.</em
+                            >Shoutout to my fellow cartographer-poets. <a href='#'>Email me</a> if you exist.</em
                         >
                     </p>
                     <h3>Of note</h3>
@@ -163,7 +169,7 @@
                                 >My favorite <a href="#">video game</a>.</span
                             >
                             <span class="favorite"
-                                >My favorite <a href="#">shape</a>.</span
+                                >My favorite <a href="#">polygon</a>.</span
                             >
                             <span class="favorite"
                                 >My favorite <a href="#">map fact</a>.</span
@@ -191,7 +197,14 @@
             </section>
             <section id="outro" class="center-content left-align">
                 <div>
-                    <h2 class="center-header">Outro</h2>
+                    <h2 class="center-header">Enough about me</h2>
+
+                    <p>Tell me about you!🤩</p>
+                    <p>Drop me an email at <strong>courtneygcox96@gmail.com</strong>.</p>
+                    <p><strong>I'm open to</strong>: friends, employment, freelance opportunities, and/or info dumps about your favorite transit map.</p>
+                    <p>(Neurodiversity & deaf🦻 friendly spaces & faces are especially my jam.)</p>
+                    <br/>
+                    <p><strong>By the way!</strong> <br/>Accessibility is non-negotiable. <br/>If I've missed the mark on any part of this site, I'd love to know so I can work to do better.</p>
                 </div>
             </section>
         </div>
@@ -212,7 +225,7 @@
     #about,
     #portfolio,
     #outro {
-        height: 100vh;
+        height: auto;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -221,6 +234,8 @@
         text-align: center; /* Added this line for centering text */
         min-height: 100vh;
         margin: 10px auto;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
 
     .left-align {
