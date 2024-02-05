@@ -1,5 +1,4 @@
 <script>
-    import PortfolioCard from "$lib/components/PortfolioCard.svelte";
     import Grid from "$lib/components/Grid.svelte";
     import rabbit from "$lib/assets/rabbit-hole.jpg";
 
@@ -206,6 +205,7 @@
                     <br/>
                     <p><strong>By the way!</strong> <br/>Accessibility is non-negotiable. <br/>If I've missed the mark on any part of this site, I'd love to know so I can work to do better.</p>
                 </div>
+                <p><a href='#header'>Return to top.</a></p>
             </section>
         </div>
     </div>
