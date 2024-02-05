@@ -1,4 +1,7 @@
 <script>
+    import PortfolioCard from "$lib/components/PortfolioCard.svelte";
+    import Grid from "$lib/components/Grid.svelte";
+    import rabbit from "$lib/assets/rabbit-hole.jpg";
 
 
     // Function to handle smooth scrolling
@@ -8,6 +11,67 @@
             section.scrollIntoView({ behavior: "smooth" });
         }
     }
+
+        let portfolioItems = [
+            {
+                id: 1,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            {
+                id: 2,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            {
+                id: 3,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            {
+                id: 4,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            {
+                id: 5,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            {
+                id: 6,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            {
+                id: 7,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            {
+                id: 8,
+                imageId: rabbit,
+                title: "Project 1",
+                context: "Description of Project 1",
+                URL: "#",
+            },
+            // Add more portfolio items as needed
+        ];
+
 </script>
 
 <svelte:head>
@@ -20,30 +84,114 @@
         <div class="snapper">
             <section id="header" class="center-content">
                 <div class="left-align">
-                    <h1>hi, I'm court. :)</h1>
+                    <h1>Hi, I'm Court.</h1>
                     <h2>I make maps + other things, too.</h2>
                     <h3>I'm a 2023-24 New York Times fellow.</h3>
                     <h4>
-                        Tap <a href="#" on:click={() => scrollToSection('about')}>here</a> to learn more about me,
+                        Tap <a
+                            href="#"
+                            on:click={() => scrollToSection("about")}>here</a
+                        >
+                        to learn more about me,
                         <br class="mobile-break" />or
-                        <a href="#" on:click={() => scrollToSection('portfolio')}>here</a> to view my work.
+                        <a
+                            href="#"
+                            on:click={() => scrollToSection("portfolio")}
+                            >here</a
+                        > to view my work.
                     </h4>
                 </div>
             </section>
             <section id="about" class="center-content">
-                <div class=left-align>
-                    <h2>About me</h2>
-                    <h3>My favorite place to be is down a rabbit hole.</h3>
+                <div class="left-align-about left-align">
+                    <h2 class="center-header">About me</h2>
+                    <h3>My degrees</h3>
+                    <p>
+                        I have a bachelor's degree in Creative Writing and a
+                        master's degree in Digital Mapping.
+                    </p>
+                    <p>
+                        <em
+                            >Shoutout to my fellow cartographer-poets. Email me
+                            if you exist.</em
+                        >
+                    </p>
+                    <h3>Of note</h3>
+                    <p>
+                        See <a href="#">my résumé</a> for the deets on my work
+                        with <a href="#">The Upshot/New York Times</a>, some
+                        notes on my other journalistic work + scholarships &
+                        awards I've received.
+                    </p>
+                    <!-- <p>See my resume for the deets.</p>
+                    <p>
+                        - I won an award for undergraduate research I completed while a visiting student at the Unviersity of Oxford. 
+                    </p>
+                    <p>
+                        - I won a Major League Hackers award with my all-girls team for a choose-your-own adventure game called <em>Marian the Librarian</em>.
+                    </p>
+                    <p>
+                        - I completed a data fellowship with the McClatchy D.C. Bureau/Miami Herald.
+                    </p>
+            
+                    <p>
+                        - Currently, I work in The Upshot at The New York Times, as a member of the 2023-24 fellowship class.
+                    </p> -->
+
+                    <h3>A few of my favorite things</h3>
+                    <div class="favorites">
+                        <p>
+                            <span class="favorite"
+                                >My favorite <a href="#">map</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">novel</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">poem</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">place to be</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">language</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">dog</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">video game</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">shape</a>.</span
+                            >
+                            <span class="favorite"
+                                >My favorite <a href="#">map fact</a>.</span
+                            >
+                        </p>
+
+                        <p style="padding-top: 3px;">
+                            <strong
+                                >Up next: <a
+                                    href="#"
+                                    on:click={() =>
+                                        scrollToSection("portfolio")}
+                                    >PORTFOLIO</a
+                                >.</strong
+                            >
+                        </p>
+                    </div>
                 </div>
             </section>
-            <section id="portfolio" class="center-content left-align">
-                <div>
-                    <h2>Portfolio</h2>
+            <section id="portfolio" class="center-content">
+                <div class="left-align">
+                    <h2 class="center-header">Portfolio</h2>
+                    <Grid items={portfolioItems} />
                 </div>
             </section>
             <section id="outro" class="center-content left-align">
                 <div>
-                    <h2>Outro</h2>
+                    <h2 class="center-header">Outro</h2>
                 </div>
             </section>
         </div>
@@ -51,6 +199,15 @@
 </main>
 
 <style>
+    .favorites {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .favorite {
+        margin-right: auto 3px;
+    }
+
     #header,
     #about,
     #portfolio,
@@ -62,11 +219,22 @@
         justify-content: center;
         align-items: center;
         text-align: center; /* Added this line for centering text */
+        min-height: 100vh;
+        margin: 10px auto;
     }
 
     .left-align {
         text-align: left;
         max-width: 80%;
+    }
+
+    @media screen and (max-width: 600px) {
+        .left-align-about {
+            text-align: left;
+            max-width: 80%;
+            height: 100vh;
+            margin-top: 5px;
+        }
     }
 
     .outer-container {
@@ -83,6 +251,7 @@
         height: 100vh;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
+        margin-top: 3px;
     }
 
     .snapper section {
@@ -103,7 +272,7 @@
 
     h2 {
         font-size: 2rem;
-        margin: 10px 0 auto;
+        margin: 5px 0 auto;
     }
 
     h3,
@@ -116,5 +285,13 @@
         text-decoration: none;
         border-bottom: 1px solid #000;
         cursor: pointer;
+    }
+
+    .center-header {
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.5;
     }
 </style>
