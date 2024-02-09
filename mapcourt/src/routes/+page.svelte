@@ -48,7 +48,7 @@
 <svelte:window bind:scrollY={y} />
 
 <svelte:head>
-    <title>Courtney Cox</title>
+    <title>MapCourt Portfolio</title>
     <meta name="description" content="Courtney Cox's portfolio website" />
 </svelte:head>
 
@@ -106,17 +106,16 @@
                             master's degree in Digital Mapping.
                         </p>
                         <p>
-                            <em
-                                >Shoutout to my fellow cartographer-poets. <a
-                                    href="#">Email me</a
+                            <em>Shoutout to my fellow cartographer-poets. <a
+                                href="mailto: courtneygcox96@gmail.com">Email me</a
                                 > if you exist.</em
                             >
                         </p>
                         <h3>Of note</h3>
                         <p>
                             See <a href="#">my résumé</a> for the deets on my
-                            work with <a href="#">The Upshot/New York Times</a>,
-                            some notes on my other journalistic work +
+                            work with <a href="https://www.nytimes.com/section/upshot" target='_blank'>The Upshot/New York Times</a>,
+                            some notes on my other work +
                             scholarships & awards I've received.
                         </p>
                         <h3>A few of my favorite things</h3>
@@ -177,7 +176,7 @@
                         <p>Tell me about you!🤩</p>
                         <p>
                             Drop me an email at <strong
-                                >courtneygcox96@gmail.com</strong
+                                ><a href="mailto:courtneygcox96@gmail.com">courtneygcox96@gmail.com</a></strong
                             >.
                         </p>
                         <p>
@@ -208,6 +207,7 @@
     .scroll-arrow {
         width: 40px;
         height: 40px;
+        padding-top: 55px;
         /* position: absolute; */
         /* bottom: 20px; */
         background: none;

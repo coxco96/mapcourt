@@ -1,11 +1,11 @@
 <script>
-    export let url, title, context, imageId;
+    export let url, title, context, imageId, alt;
 </script>
 
 <div class="portfolio-card">
 
     {#if imageId}
-        <a class='image-link' href={url}><img src={imageId} target='_blank' alt={title} class="portfolio-image" /></a>
+        <a class='image-link' href={url}><img src={imageId} target='_blank' {alt} class="portfolio-image" /></a>
     {/if}
 
     {#if title}
@@ -13,18 +13,19 @@
     {/if}
 
     {#if context}
-        <p class="portfolio-context">{context}</p>
+        <em><p class="portfolio-context">{context}</p></em>
     {/if}
 </div>
 
 <style>
-    /* Adjust styles as needed */
+
     .portfolio-card {
-        text-align: center;
-        padding: 2px;
-        border: 1px solid #dedede;
+        text-align: left;
+        padding: 5px;
+        /* border: 1px solid #dedede; */
         border-radius: 1px;
-        margin: 0px;
+        margin: 30px 5px;
+
     }
 
     .portfolio-image {
@@ -36,11 +37,20 @@
     .portfolio-title {
         font-size: 1.2rem;
         margin: 2px auto;
+        text-align: left;
+        height: auto;
+   
     }
 
     .portfolio-context {
         margin: 0 auto 1px;
         color: #555;
+        text-align: left;
+        justify-content: end;
+        padding: 1px;
+        margin: 1px;
+
+
     }
 
     .title-link {
