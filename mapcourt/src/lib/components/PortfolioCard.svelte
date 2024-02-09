@@ -25,6 +25,7 @@
         /* border: 1px solid #dedede; */
         border-radius: 1px;
         margin: 30px 5px;
+        height: 450px;
 
     }
 
