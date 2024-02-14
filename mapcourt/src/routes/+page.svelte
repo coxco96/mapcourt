@@ -2,11 +2,11 @@
     import { onMount, afterUpdate } from "svelte";
     import Grid from "$lib/components/Grid.svelte";
     import downArrow from "$lib/assets/down-arrow.svg";
+    import { base } from "$app/paths";
 
     let header;
     let portfolio;
     let showHeaderButton = false;
-
 
     let snapper;
 
@@ -31,10 +31,7 @@
                 entry.intersectionRatio >= observerOptions.threshold;
         }, observerOptions);
 
-
-
         observerHeader.observe(header);
-
     }
 
     function linkScroller(sectionId) {
@@ -69,13 +66,13 @@
                         </h3>
                         <h4>
                             Tap <a
-                                href="#"
+                                href="{base}/#"
                                 on:click={() => linkScroller("about")}>here</a
                             >
                             to learn more about me,
                             <br class="mobile-break" />or
                             <a
-                                href="#"
+                                href="{base}/#"
                                 on:click={() => linkScroller("portfolio")}
                                 >here</a
                             >
@@ -106,49 +103,63 @@
                             master's degree in Digital Mapping.
                         </p>
                         <p>
-                            <em>Shoutout to my fellow cartographer-poets. <a
-                                href="mailto: courtneygcox96@gmail.com">Email me</a
+                            <em
+                                >Shoutout to my fellow cartographer-poets. <a
+                                    href="mailto: courtneygcox96@gmail.com"
+                                    >Email me</a
                                 > if you exist.</em
                             >
                         </p>
                         <h3>Of note</h3>
                         <p>
-                            See <a href="#">my résumé</a> for the deets on my
-                            work with <a href="https://www.nytimes.com/section/upshot" target='_blank'>The Upshot/New York Times</a>,
-                            some notes on my other work +
-                            scholarships & awards I've received.
+                            See <a href="{base}/#">my résumé</a> for the deets
+                            on my work with
+                            <a
+                                href="https://www.nytimes.com/section/upshot"
+                                target="_blank">The Upshot/New York Times</a
+                            >, some notes on my other work + scholarships &
+                            awards I've received.
                         </p>
                         <h3>A few of my favorite things</h3>
                         <div class="favorites">
                             <p class="before-arrow">
                                 <span class="favorite"
-                                    >My favorite <a href="#">map</a>.</span
-                                >
-                                <span class="favorite"
-                                    >My favorite <a href="#">novel</a>.</span
-                                >
-                                <span class="favorite"
-                                    >My favorite <a href="#">poem</a>.</span
-                                >
-                                <span class="favorite"
-                                    >My favorite <a href="#">place to be</a
+                                    >My favorite <a href="{base}/#">map</a
                                     >.</span
                                 >
                                 <span class="favorite"
-                                    >My favorite <a href="#">language</a>.</span
-                                >
-                                <span class="favorite"
-                                    >My favorite <a href="#">dog</a>.</span
-                                >
-                                <span class="favorite"
-                                    >My favorite <a href="#">video game</a
+                                    >My favorite <a href="{base}/#">novel</a
                                     >.</span
                                 >
                                 <span class="favorite"
-                                    >My favorite <a href="#">polygon</a>.</span
+                                    >My favorite <a href="{base}/#">poem</a
+                                    >.</span
                                 >
                                 <span class="favorite"
-                                    >My favorite <a href="#">map fact</a>.</span
+                                    >My favorite <a href="{base}/#"
+                                        >place to be</a
+                                    >.</span
+                                >
+                                <span class="favorite"
+                                    >My favorite <a href="{base}/#">language</a
+                                    >.</span
+                                >
+                                <span class="favorite"
+                                    >My favorite <a href="{base}/#">dog</a
+                                    >.</span
+                                >
+                                <span class="favorite"
+                                    >My favorite <a href="{base}/#"
+                                        >video game</a
+                                    >.</span
+                                >
+                                <span class="favorite"
+                                    >My favorite <a href="{base}/#">polygon</a
+                                    >.</span
+                                >
+                                <span class="favorite"
+                                    >My favorite <a href="{base}/#">map fact</a
+                                    >.</span
                                 >
                             </p>
                         </div>
@@ -165,9 +176,7 @@
                         <h2 class="center-header">Portfolio</h2>
                         <Grid items />
                     </div>
-                    
                 </section>
-
             </div>
             <div class="section-container">
                 <section id="outro" class="center-content left-align">
@@ -176,7 +185,9 @@
                         <p>Tell me about you!🤩</p>
                         <p>
                             Drop me an email at <strong
-                                ><a href="mailto:courtneygcox96@gmail.com">courtneygcox96@gmail.com</a></strong
+                                ><a href="mailto:courtneygcox96@gmail.com"
+                                    >courtneygcox96@gmail.com</a
+                                ></strong
                             >.
                         </p>
                         <p>
@@ -196,7 +207,7 @@
                             do better.
                         </p>
                     </div>
-                    <p><a href="#header">Return to top.</a></p>
+                    <p><a href="{base}/#header">Return to top.</a></p>
                 </section>
             </div>
         </div>
