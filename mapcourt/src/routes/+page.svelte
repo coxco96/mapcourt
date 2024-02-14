@@ -284,6 +284,7 @@
         height: 100vh;
         font-family: "helvetica neue", sans-serif;
         flex-direction: column;
+        max-width: 100%;
     }
 
     .snapper {

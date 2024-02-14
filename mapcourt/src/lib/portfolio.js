@@ -104,7 +104,7 @@ export const items = [{
         id: 11,
         imageId: modelCall,
         alt: "social media graphic with text that reads: nothing about us without us, and explains that the mission of the organization is to improve the lives of all people with disabilities, and that diverse identities are celebrated.",
-        title: "noting about us without us: a model call",
+        title: "nothing about us without us: a model call",
         context: "a social media model call to increase disability representation in stock photography",
         url: "https://www.instagram.com/p/Cn0AC14Or_4/?img_index=5"
     },
@@ -165,7 +165,7 @@ export const items = [{
         imageId: earth,
         alt: "zoomed out look at a designed earth",
         title: "my favorite Earth I've ever designed",
-        context: "Earth is always my favorite planet, but this one is especially nice. designed in Mapbox Studio",
+        context: "Earth has always been my favorite planet, but this one is especially nice. designed in Mapbox Studio",
     }
 
 
